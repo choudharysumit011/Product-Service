@@ -29,4 +29,10 @@ public class ProductController {
     public List<ProductResponse> getProduct(){
        return productService.getProduct();
     }
+
+    @GetMapping("/get/name/{id}")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public List<ProductResponse> getProductByName(@PathVariable String id){
+        return productService.getProductByName(id);
+    }
 }
